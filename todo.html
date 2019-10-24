@@ -3,23 +3,28 @@
 
 <head>
     <title>Todo</title>
-    <script src="todo.js"></script>
-    <link rel="stylesheet" href="css/todo.css">
+
+    <link rel="stylesheet" href="css/style.css">
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 
-<body>
-
-    <div class="header">
-        <h3>TODO LIST</h3>
-        <input id = "inp" type="text" name="intask" placeholder="add task to do...">
-        <span onclick=addTask() id="add" >Add Task</span>
-    </div>
-
-    <ul id="list" >
-        <li>do the TODO list</li>
-    </ul>
-
+<body onload="update(); populate()">
+    <section>
+        <div class="header">
+            <div id="title">
+                <h3>TODO LIST</h3>
+            </div>
+            <input id="inp" type="text" name="intask" placeholder="Add task to list...">
+            <span onclick=addTask() id="add">Add Task</span>
+        </div>
+    
+        <ul id="list">
+            <li ><input class="ccb" name="cb" onclick=update() type="checkbox" checked><label>Finish assignment 7</label></li>
+            <li class="checked"><input class="ccb" name="cb" onclick=update() type="checkbox"><label>Finish the project</label></li>
+        </ul>
+        <div id="output">
+        </div>
+    </section>
+    <script src="todo.js"></script>
 </body>
